@@ -6,14 +6,15 @@ import {
 } from "react-router-dom";
 import AddTodo from './components/AddTodo';
 import ListTodo from './components/ListTodo';
-import { createContext } from 'react';
+import { createContext, useState } from 'react';
 
 export const TodoContext = createContext()
 
 function App() {
+  const [first, setfirst] = useState([])
   return (
     <div className="App">
-      <TodoContext.Provider value={"Emil"} >
+      <TodoContext.Provider value={first} >
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<AddTodo/>}/>
