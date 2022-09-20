@@ -15,7 +15,7 @@ function App() {
   const [first, setfirst] = useState([])
   return (
     <div className="App">
-      <TodoContext.Provider value={first} >
+      <TodoContext.Provider value={{first , setfirst}} >
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<ListTodo/>}/>
